@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<l10n>
+	<translationContributors/>
+	<texts>
+		<text name = "mmi_setting_title" 		text = "More Milk - Settings"/>
+		<text name = "mmi_Multiplier_short" 	text = "Milk Produce Multiplier"/>
+		<text name = "mmi_Multiplier_long" 		text = "Select your multiplier number, higher number gets more milk per game hour."/>
+		<text name = "mmi_blink_warn"			text = "Warning: The milk production multiplier from animals has been updated."/>
+	</texts>
+</l10n>

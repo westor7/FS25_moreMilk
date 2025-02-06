@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<l10n>
+	<translationContributors/>
+	<texts>
+		<text name = "mmi_setting_title" 		text = "Mehr Milch – Einstellungen"/>
+		<text name = "mmi_Multiplier_short" 	text = "Milchprodukt-Multiplikator"/>
+		<text name = "mmi_Multiplier_long" 		text = "Wählen Sie Ihre Multiplikatorzahl. Eine höhere Zahl bringt Ihnen mehr Milch pro Spielstunde."/>
+		<text name = "mmi_blink_warn"			text = "Achtung: Der Multiplikator für die Milchproduktion von Tieren wurde aktualisiert."/>
+	</texts>
+</l10n>
