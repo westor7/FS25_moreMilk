@@ -8,6 +8,10 @@ This mod allows you to change in **Farming Simulator 2025 (FS25)** the milk lite
 > [!CAUTION]
 > This mod does NOT working (for now) under multiplayer!
 
+## Credits
+
+- Especially thanks to [@GMNGjoy](https://github.com/GMNGjoy) for helping me creating the head code.
+
 -------------------------------------
 
 ## Installation
