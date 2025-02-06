@@ -10,12 +10,11 @@ local moreMilkUI_mt = Class(moreMilkUI)
 
 ---Creates the settings UI object
 ---@return SettingsUI @The new object
-function moreMilkUI.new(settings, debug)
+function moreMilkUI.new(settings)
     local self = setmetatable({}, moreMilkUI_mt)
 
     self.controls = {}
 	self.settings = settings
-	self.debug = debug
 
     return self
 end
@@ -75,6 +74,8 @@ function moreMilkUI:onFrameClose()
 	if moreMilk.settings.Multiplier == moreMilk.settings.Multiplier_OLD then return	end
 	
 	moreMilk.settings.Multiplier_OLD = moreMilk.settings.Multiplier
+	
+	moreMilk:initAllAnimals()
 
 	g_currentMission:showBlinkingWarning(g_i18n:getText("mmi_blink_warn"), 5000)
 end

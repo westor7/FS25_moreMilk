@@ -2,9 +2,9 @@
 <l10n>
 	<translationContributors/>
 	<texts>
-		<text name = "mmi_setting_title" 		text = "Plus de lait – Paramètres"/>
-		<text name = "mmi_Multiplier_short" 	text = "Multiplicateur de production laitière"/>
-		<text name = "mmi_Multiplier_long" 		text = "Sélectionnez votre numéro multiplicateur, un nombre plus élevé donne plus de lait par heure de jeu."/>
-		<text name = "mmi_blink_warn"			text = "Attention : le multiplicateur de production de lait à partir d'animaux a été mis à jour."/>
+		<text name = "mmi_setting_title" 			text = "Plus de lait – Paramètres"/>
+		<text name = "mmi_Multiplier_short" 		text = "Multiplicateur de production laitière"/>
+		<text name = "mmi_Multiplier_long" 			text = "Sélectionnez votre numéro multiplicateur, un nombre plus élevé donne plus de lait par heure de jeu."/>
+		<text name = "mmi_blink_warn"				text = "Attention : le multiplicateur de production de lait à partir d'animaux a été mis à jour."/>
 	</texts>
 </l10n>

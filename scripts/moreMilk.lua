@@ -6,12 +6,12 @@
 moreMilk = {}
 moreMilk.settings = {}
 moreMilk.name = g_currentModName or "FS25_moreMilk"
-moreMilk.version = "1.0.0.0"
+moreMilk.version = "1.0.1.0"
 moreMilk.dir = g_currentModDirectory
 moreMilk.init = false
 
 function moreMilk.prerequisitesPresent(specializations)
-    return true
+	return true
 end
 
 function moreMilk:loadMap()
@@ -19,7 +19,7 @@ function moreMilk:loadMap()
 		Logging.error("[%s]: Error, Cannot use this mod because this mod is working only for singleplayer!", moreMilk.name)
 
 		return
-    end
+	end
 
 	InGameMenu.onMenuOpened = Utils.appendedFunction(InGameMenu.onMenuOpened, moreMilk.initUi)
 
@@ -35,8 +35,7 @@ function moreMilk:saveSettings()
 	Logging.info("[%s]: Trying to save settings..", moreMilk.name)
 
 	local modSettingsDir = getUserProfileAppPath() .. "modSettings"
-	local fileName = "moreMilk.xml"
-	local createXmlFile = modSettingsDir .. "/" .. fileName
+	local createXmlFile = modSettingsDir .. "/" .. "moreMilk.xml"
 
 	local xmlFile = createXMLFile("moreMilk", createXmlFile, "moreMilk")
 	
@@ -52,8 +51,7 @@ function moreMilk:loadSettings()
 	Logging.info("[%s]: Trying to load settings..", moreMilk.name)
 	
 	local modSettingsDir = getUserProfileAppPath() .. "modSettings"
-	local fileName = "moreMilk.xml"
-	local fileNamePath = modSettingsDir .. "/" .. fileName
+	local fileNamePath = modSettingsDir .. "/" .. "moreMilk.xml"
 	
 	if fileExists(fileNamePath) then
 		Logging.info("[%s]: File founded, loading now the settings..", moreMilk.name)
@@ -105,7 +103,7 @@ end
 
 function moreMilk:initUi()
 	if not moreMilk.init then
-		local uiSettingsmoreMilk = moreMilkUI.new(moreMilk.settings,moreMilk.debug)
+		local uiSettingsmoreMilk = moreMilkUI.new(moreMilk.settings)
 		
 		uiSettingsmoreMilk:registerSettings()
 		
@@ -119,11 +117,28 @@ function moreMilk:loadAnimals()
 	Logging.info("[%s]: Initializing mod v%s (c) 2025 by westor.", moreMilk.name, moreMilk.version)
 
 	moreMilk:loadSettings()
+	moreMilk:initAllAnimals()
+	
+	Logging.info("[%s]: End of mod initalization.", moreMilk.name)
+end
+
+function moreMilk:initAllAnimals()
+	local types = { 
+		"COW_SWISS_BROWN", 
+		"COW_HOLSTEIN", 
+		"COW_WATERBUFFALO",
+		
+		"GOAT"
+	}
+	
+	moreMilk.updated = 0
+	
+	Logging.info("[%s]: Start of animals milk updates. - Total: %s", moreMilk.name, table.getn(types))
 
 	moreMilk:initCows()
 	moreMilk:initGoats()
 	
-	Logging.info("[%s]: End of mod initalization.", moreMilk.name)
+	Logging.info("[%s]: End of animals milk updates. - Updated: %s - Total: %s", moreMilk.name, moreMilk.updated, table.getn(types))
 end
 
 function moreMilk:initCows()
@@ -136,6 +151,8 @@ function moreMilk:initCows()
 			local animalType = subType.name
 			
 			if fillType ~= nil and fillTypeName == "MILK" or fillTypeName == "BUFFALOMILK" then
+			
+				moreMilk.updated = moreMilk.updated + 1
 
 				for _2, output in ipairs(subType.output.milk.curve.keyframes) do
 					local amount = output[1]
@@ -168,6 +185,8 @@ function moreMilk:initGoats()
 			local animalType = subType.name
 			
 			if fillType ~= nil and fillTypeName == "GOATMILK" then
+			
+				moreMilk.updated = moreMilk.updated + 1
 			
 				for _2, output in ipairs(subType.output.pallets.curve.keyframes) do
 					local amount = output[1]
