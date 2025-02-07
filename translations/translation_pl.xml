@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<l10n>
+	<translationContributors>Google translate</translationContributors>
+	<texts>
+		<text name = "mmi_setting_title" 			text = "Więcej mleka - Ustawienia"/>
+		<text name = "mmi_Multiplier_short" 		text = "Mnożnik produkcji mleka"/>
+		<text name = "mmi_Multiplier_long" 			text = "Wybierz liczbę mnożnika, im wyższa liczba, tym więcej mleka na godzinę gry."/>
+		<text name = "mmi_blink_warn"				text = "Ostrzeżenie: Zaktualizowano mnożnik produkcji mleka u zwierząt."/>
+	</texts>
+</l10n>

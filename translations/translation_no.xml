@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<l10n>
+	<translationContributors>Google translate</translationContributors>
+	<texts>
+		<text name = "mmi_setting_title" 			text = "Mer melk - Innstillinger"/>
+		<text name = "mmi_Multiplier_short" 		text = "Multiplikator for melkeproduksjon"/>
+		<text name = "mmi_Multiplier_long" 			text = "Velg multiplikatornummeret ditt, høyere tall får mer melk per spilletime."/>
+		<text name = "mmi_blink_warn"				text = "Advarsel: Melkeproduksjonsmultiplikatoren fra dyr er oppdatert."/>
+	</texts>
+</l10n>

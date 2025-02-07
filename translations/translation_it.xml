@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<l10n>
+	<translationContributors>Google translate</translationContributors>
+	<texts>
+		<text name = "mmi_setting_title" 			text = "Più Latte - Impostazioni"/>
+		<text name = "mmi_Multiplier_short" 		text = "Moltiplicatore di produzione di latte"/>
+		<text name = "mmi_Multiplier_long" 			text = "Seleziona il numero del moltiplicatore: più alto è il numero, più latte riceverai per ora di gioco."/>
+		<text name = "mmi_blink_warn"				text = "Attenzione: il moltiplicatore della produzione di latte degli animali è stato aggiornato."/>
+	</texts>
+</l10n>

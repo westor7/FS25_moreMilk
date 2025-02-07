@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<l10n>
+	<translationContributors/>
+	<texts>
+		<text name = "mmi_setting_title" 			text = "Mai mult lapte - Setări"/>
+		<text name = "mmi_Multiplier_short" 		text = "Multiplicator de produse din lapte"/>
+		<text name = "mmi_Multiplier_long" 			text = "Selectați numărul multiplicatorului, numărul mai mare obține mai mult lapte pe oră de joc."/>
+		<text name = "mmi_blink_warn"				text = "Avertisment: multiplicatorul producției de lapte de la animale a fost actualizat."/>
+	</texts>
+</l10n>

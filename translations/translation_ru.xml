@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<l10n>
+	<translationContributors>Google translate</translationContributors>
+	<texts>
+		<text name = "mmi_setting_title" 			text = "Больше молока - Настройки"/>
+		<text name = "mmi_Multiplier_short" 		text = "Множитель производства молока"/>
+		<text name = "mmi_Multiplier_long" 			text = "Выберите числовой множитель: чем больше число, тем больше молока за час игры."/>
+		<text name = "mmi_blink_warn"				text = "Внимание: коэффициент производства молока у животных был обновлен."/>
+	</texts>
+</l10n>

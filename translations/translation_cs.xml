@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<l10n>
+	<translationContributors>Google translate</translationContributors>
+	<texts>
+		<text name = "mmi_setting_title" 			text = "Více Mléka – Nastavení"/>
+		<text name = "mmi_Multiplier_short" 		text = "Multiplikátor produkce mléka"/>
+		<text name = "mmi_Multiplier_long" 			text = "Vyberte své číslo násobitele, vyšší číslo dostane více mléka za hodinu hry."/>
+		<text name = "mmi_blink_warn"				text = "Upozornění: Byl aktualizován multiplikátor produkce mléka ze zvířat."/>
+	</texts>
+</l10n>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<l10n>
+	<translationContributors>Google translate</translationContributors>
+	<texts>
+		<text name = "mmi_setting_title" 			text = "Lebih Banyak Susu - Pengaturan"/>
+		<text name = "mmi_Multiplier_short" 		text = "Pengganda Produksi Susu"/>
+		<text name = "mmi_Multiplier_long" 			text = "Pilih angka pengali Anda, angka yang lebih tinggi akan mendapat lebih banyak susu per jam permainan."/>
+		<text name = "mmi_blink_warn"				text = "Peringatan: Pengganda produksi susu dari hewan telah diperbarui."/>
+	</texts>
+</l10n>

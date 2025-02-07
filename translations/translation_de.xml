@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <l10n>
-	<translationContributors/>
+	<translationContributors>Google translate</translationContributors>
 	<texts>
 		<text name = "mmi_setting_title" 			text = "Mehr Milch – Einstellungen"/>
 		<text name = "mmi_Multiplier_short"			text = "Milchprodukt-Multiplikator"/>
