@@ -9,6 +9,7 @@ moreMilk.name = g_currentModName or "FS25_moreMilk"
 moreMilk.version = "1.0.1.0"
 moreMilk.dir = g_currentModDirectory
 moreMilk.init = false
+moreMilk.initUI = false
 
 function moreMilk.prerequisitesPresent(specializations)
 	return true
@@ -21,6 +22,8 @@ function moreMilk:loadMap()
 		return
 	end
 
+	moreMilk.init = true
+
 	InGameMenu.onMenuOpened = Utils.appendedFunction(InGameMenu.onMenuOpened, moreMilk.initUi)
 
 	FSBaseMission.saveSavegame = Utils.appendedFunction(FSBaseMission.saveSavegame, moreMilk.saveSettings)
@@ -28,7 +31,7 @@ end
 
 function moreMilk:defSettings()
 	moreMilk.settings.Multiplier = 2
-	moreMilk.settings.Multiplier_OLD = 2
+	moreMilk.settings.OldMultiplier = 2
 end
 
 function moreMilk:saveSettings()
@@ -89,7 +92,7 @@ function moreMilk:loadSettings()
 		end
 		
 		moreMilk.settings.Multiplier = Multiplier
-		moreMilk.settings.Multiplier_OLD = Multiplier
+		moreMilk.settings.OldMultiplier = Multiplier
 		
 		delete(xmlFile)
 					
@@ -102,12 +105,12 @@ function moreMilk:loadSettings()
 end
 
 function moreMilk:initUi()
-	if not moreMilk.init then
+	if not moreMilk.initUI then
 		local uiSettingsmoreMilk = moreMilkUI.new(moreMilk.settings)
 		
 		uiSettingsmoreMilk:registerSettings()
 		
-		moreMilk.init = true
+		moreMilk.initUI = true
 	end
 end
 
@@ -159,11 +162,20 @@ function moreMilk:initCows()
 					local age = output.time
 
 					if amount ~= nil and amount ~= 0 and age ~= 0 then
-						local newAmount = amount * moreMilk.settings.Multiplier
+						local newAmount = 0
+						local defAmount = 0
+						
+						if moreMilk.init then 
+							defAmount = amount / moreMilk.settings.OldMultiplier
+							newAmount = defAmount * moreMilk.settings.Multiplier
+						else
+							defAmount = amount
+							newAmount = defAmount * moreMilk.settings.Multiplier
+						end
 
 						output[1] = newAmount
 						
-						Logging.info("[%s]: Cow animal milk amount has been updated. - Animal Type: %s - Age: %s - Old Value: %s - New Value: %s - Multiplier: %s", moreMilk.name, animalType, age, amount, newAmount, moreMilk.settings.Multiplier)
+						Logging.info("[%s]: Cow animal milk amount has been updated. - Animal Type: %s - Age: %s - Default: %s - Old: %s - New: %s - Old Multiplier: %s - New Multiplier: %s", moreMilk.name, animalType, age, defAmount, amount, newAmount, moreMilk.settings.OldMultiplier, moreMilk.settings.Multiplier)
 					end
 					
 				end
@@ -193,11 +205,20 @@ function moreMilk:initGoats()
 					local age = output.time
 
 					if amount ~= nil and amount ~= 0 and age ~= 0 then
-						local newAmount = amount * moreMilk.settings.Multiplier
+						local newAmount = 0
+						local defAmount = 0
+						
+						if moreMilk.init then 
+							defAmount = amount / moreMilk.settings.OldMultiplier
+							newAmount = defAmount * moreMilk.settings.Multiplier
+						else
+							defAmount = amount
+							newAmount = defAmount * moreMilk.settings.Multiplier
+						end
 
 						output[1] = newAmount
 						
-						Logging.info("[%s]: Goat animal milk amount has been updated. - Animal Type: %s - Age: %s - Old Value: %s - New Value: %s - Multiplier: %s", moreMilk.name, animalType, age, amount, newAmount, moreMilk.settings.Multiplier)
+						Logging.info("[%s]: Goat animal milk amount has been updated. - Animal Type: %s - Age: %s - Default: %s - Old: %s - New: %s - Old Multiplier: %s - New Multiplier: %s", moreMilk.name, animalType, age, defAmount, amount, newAmount, moreMilk.settings.OldMultiplier, moreMilk.settings.Multiplier)
 					end
 					
 				end
